@@ -36,7 +36,7 @@ func main() {
 	wg.Add(1)
 	go task3(&wg)
 
-	for i := 1; i < 1000000000; i++ {
+	for i := 1; i < 5; i++ {
 		wg.Add(1)
 		go worker(i, &wg)
 	}
